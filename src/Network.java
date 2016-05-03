@@ -24,13 +24,15 @@ public class Network implements Observer{
 
     public synchronized void writeAlarm(NodeThread node){
         try {
-            pr = new PrintWriter(new FileOutputStream(new File ("C:\\Users\\jeiroodi\\Documents\\alarm.txt"),true));
+            pr = new PrintWriter(new FileOutputStream(new File ("C:\\Users\\kjeirroo\\Documents\\alarm.txt"),true));
 
             for (int i =0;i<8;i++) {
                 if (arlamMatrix[Integer.parseInt(node.getNodename())-1][i]==1){
-                    Calendar cal = Calendar.getInstance();
-                    SimpleDateFormat moment = new SimpleDateFormat("HH:mm:ss");
-                     pr.println("M"+i+" "+moment.format(cal.getTime()));
+                	//----- in case if I wanted to use timestamps ------- 
+                	//Calendar cal = Calendar.getInstance();
+                    //SimpleDateFormat moment = new SimpleDateFormat("HH:mm:ss");
+                	// (int)(Math.random()*3)-1)
+                     pr.println("M"+(i+1)+" "+  (System.currentTimeMillis()+(int)(Math.random()*3)-1));
                 }
             }
 

@@ -14,11 +14,14 @@ public class NodeThread extends Observable implements Runnable  {
 
     public void run() {
 
-        System.out.println("Node "+nodename+" is running");
+    	//array for giving each node different failure rate/probability
+    	int [] prbl={95,94,93,98,96,94,98,96};
+    	
+        System.out.println("Node "+nodename+" started");
         try {
             for (int i=0;i<1000;i++) {
                 int alarm=(int)(Math.random() * 100);
-                if (alarm>95) {
+                if (alarm> prbl[Character.getNumericValue(nodename.charAt(0))-1]) {
                     fault=true;
                     this.setChanged();
                     this.notifyObservers();

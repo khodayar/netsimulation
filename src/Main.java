@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(final String[] args) {
         try {
-            PrintWriter pr=  pr = new PrintWriter("C:\\Users\\jeiroodi\\Documents\\alarm.txt");
+            PrintWriter pr=  pr = new PrintWriter("C:\\Users\\kjeirroo\\Documents\\alarm.txt");
             pr.println("port time");
             pr.close();
         } catch (FileNotFoundException e) {
