@@ -19,7 +19,7 @@ public class NodeThread extends Observable implements Runnable  {
     	
         System.out.println("Node "+nodename+" started");
         try {
-            for (int i=0;i<1000;i++) {
+            for (int i=0;i<250;i++) {
                 int alarm=(int)(Math.random() * 100);
                 if (alarm> prbl[Character.getNumericValue(nodename.charAt(0))-1]) {
                     fault=true;

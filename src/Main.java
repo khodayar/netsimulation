@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(final String[] args) {
         try {
-            PrintWriter pr=  pr = new PrintWriter("C:\\Users\\kjeirroo\\Documents\\alarm.txt");
-            pr.println("port time");
+            PrintWriter pr=  pr = new PrintWriter("C:\\Users\\jeiroodi\\Documents\\alarm.txt");
+            pr.println("port time source");
             pr.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
